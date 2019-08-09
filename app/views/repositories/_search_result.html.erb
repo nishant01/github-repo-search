@@ -1,0 +1,30 @@
+<section id="show-search-result" class="banner-sec section_padding_0_80">
+  <div class="container">
+    Total Result: <%=total_count%>
+    <div class="row">
+      <% search_result.each do |entry| %>
+        <div class="col-md-2">
+          <div class="card">
+            <img class="img-fluid" src=<%=entry["owner"]["avatar_url"]%> alt="">
+            <div class="card-img-overlay">
+              <span class="badge badge-pill badge-danger"><%=entry["language"]%></span>
+            </div>
+            <div class="card-body">
+              <div class="news-title">
+                <h1 class=" title-small"><a href=<%=entry["html_url"]%> target="_blank"><%=truncate(entry["name"], :length => 15)%></a></h1>
+              </div>
+              <p class="card-text"><small class="text-time"><em>Updated <%= time_ago_in_words(DateTime.parse(entry["updated_at"])) %> ago</em></small></p>
+            </div>
+          </div>
+        </div>
+        <%end%>
+    </div>
+  </div>
+
+    <%= paginate @data,
+                 params: {controller: 'repositories', action: 'search'},
+                 remote: true, theme: 'twitter-bootstrap-4',
+                 pagination_class: "pagination-sm",
+                 nav_class: "d-inline-b"%>
+
+</section>

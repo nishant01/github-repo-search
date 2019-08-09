@@ -1,0 +1,56 @@
+body {
+  background: #ffd89b;
+  background: -webkit-linear-gradient(to right, #ffd89b, #19547b);
+  background: linear-gradient(to right, #ffd89b, #19547b);
+  min-height: 100vh;
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+a, a:hover, .btn{outline:none!important;}
+section{padding: 30px 0; float: left; width: 100%}
+.card{float: left; width:100%}
+.title-small { color: #141517; font-size: 16px; font-weight: 400; line-height: 23px; margin: 6px 0 0;}
+.title-large a, .title-small a, .title-x-small a{color: inherit}
+.banner-sec{float: left; width: 100%; background: #EBEBEB}
+.text-time{color: #ff0000; font-weight: 600;}
+.banner-sec .card-img-overlay{padding: 0; top: 3px; left: 7px; height: 20%}
+.banner-sec .card{margin-bottom:20px;}
+
+.pagination {
+
+  padding: 0 250px!important;
+  text-align: center;
+}
+nav.d-inline-b {
+  height: 40px!important;
+}
+
+img.img-fluid {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+}
+
+li.page-item a.page-link{
+  width: 60px!important;
+}

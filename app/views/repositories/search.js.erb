@@ -1,0 +1,5 @@
+<% if @data.blank?%>
+    $("#show-search-result").html("<%= j render partial: 'shared/empty_results_div', locals: { message: "No Data To Display" } %>");
+<% else %>
+    $("#show-search-result").html("<%= j render partial: 'search_result', locals: { search_result: @data, total_count: @total_count } %>");
+<% end%>
